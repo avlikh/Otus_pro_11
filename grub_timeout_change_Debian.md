@@ -3,5 +3,5 @@
 **GRUB_TIMEOUT=5**
 Далее выполняем:
 ```
-grub2-mkconfig -o /boot/grub2/grub.cfg
+update-grub
 ```
