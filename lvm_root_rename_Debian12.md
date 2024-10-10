@@ -39,8 +39,8 @@ cat /etc/fstab | grep nginx
 cat /boot/grub/grub.cfg | grep nginx
 ```
         linux   /vmlinuz-6.1.0-18-amd64 root=/dev/mapper/nginx--vg-root ro  quiet  
-                linux   /vmlinuz-6.1.0-18-amd64 root=/dev/mapper/nginx--vg-root ro  quiet  
-                linux   /vmlinuz-6.1.0-18-amd64 root=/dev/mapper/nginx--vg-root ro single  
+        linux   /vmlinuz-6.1.0-18-amd64 root=/dev/mapper/nginx--vg-root ro  quiet  
+        linux   /vmlinuz-6.1.0-18-amd64 root=/dev/mapper/nginx--vg-root ro single  
 ```
 vgrename nginx-vg otus
 ```
