@@ -20,12 +20,12 @@ Device     Boot   Start      End  Sectors  Size Id Type
 /dev/sda1  *       2048  1050623  1048576  512M 83 Linux  
 /dev/sda2       1050624 12582911 11532288  5.5G 8e Linux LVM  
 
-Disk /dev/mapper/almalinux-root: 4.89 GiB, 5255462912 bytes, 10264576 sectors  
+Disk /dev/mapper/**almalinux**-root: 4.89 GiB, 5255462912 bytes, 10264576 sectors  
 Units: sectors of 1 * 512 = 512 bytes  
 Sector size (logical/physical): 512 bytes / 512 bytes  
 I/O size (minimum/optimal): 512 bytes / 512 bytes  
 
-Disk /dev/mapper/almalinux-swap: 616 MiB, 645922816 bytes, 1261568 sectors  
+Disk /dev/mapper/**almalinux**-swap: 616 MiB, 645922816 bytes, 1261568 sectors  
 Units: sectors of 1 * 512 = 512 bytes  
 Sector size (logical/physical): 512 bytes / 512 bytes  
 I/O size (minimum/optimal): 512 bytes / 512 bytes  
