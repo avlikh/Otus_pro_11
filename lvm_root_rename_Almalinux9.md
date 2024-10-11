@@ -3,8 +3,8 @@
 lvs
 ```
   LV   VG        Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert  
-  root almalinux -wi-ao----   4.89g  
-  swap almalinux -wi-ao---- 616.00m  
+  root **almalinux** -wi-ao----   4.89g  
+  swap **almalinux** -wi-ao---- 616.00m  
 ```
 fdisk -l
 ```
@@ -32,8 +32,8 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 ```
 cat /etc/fstab | grep almalinux
 ```
-/dev/mapper/almalinux-root /                       ext4    defaults        1 1  
-/dev/mapper/almalinux-swap none                    swap    defaults        0 0  
+/dev/mapper/**almalinux**-root /                       ext4    defaults        1 1  
+/dev/mapper/**almalinux**-swap none                    swap    defaults        0 0  
 ```
 cat /etc/default/grub | grep almalinux
 ```
