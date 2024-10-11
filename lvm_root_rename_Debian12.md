@@ -3,8 +3,8 @@
 lvs
 ```
 LV     VG       Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert  
-root   nginx-vg -wi-ao----   3.56g  
-swap_1 nginx-vg -wi-ao---- 980.00m  
+root   **nginx-vg** -wi-ao----   3.56g  
+swap_1 **nginx-vg** -wi-ao---- 980.00m  
 ```
 fdisk -l
 ```
@@ -21,20 +21,20 @@ Device     Boot   Start      End Sectors  Size Id Type
 /dev/sda2       1001470 10483711 9482242  4.5G  5 Extended  
 /dev/sda5       1001472 10483711 9482240  4.5G 8e Linux LVM  
 
-Disk /dev/mapper/nginx--vg-root: 3.56 GiB, 3825205248 bytes, 7471104 sectors  
+Disk /dev/mapper/**nginx--vg**-root: 3.56 GiB, 3825205248 bytes, 7471104 sectors  
 Units: sectors of 1 * 512 = 512 bytes  
 Sector size (logical/physical): 512 bytes / 512 bytes  
 I/O size (minimum/optimal): 512 bytes / 512 bytes  
 
-Disk /dev/mapper/nginx--vg-swap_1: 980 MiB, 1027604480 bytes, 2007040 sectors  
+Disk /dev/mapper/**nginx--vg**-swap_1: 980 MiB, 1027604480 bytes, 2007040 sectors  
 Units: sectors of 1 * 512 = 512 bytes  
 Sector size (logical/physical): 512 bytes / 512 bytes  
 I/O size (minimum/optimal): 512 bytes / 512 bytes 
 ```
 cat /etc/fstab | grep nginx
 ```
-/dev/mapper/nginx--vg-root /               ext4    errors=remount-ro 0       1  
-/dev/mapper/nginx--vg-swap_1 none            swap    sw              0       0  
+/dev/mapper/**nginx--vg**-root /               ext4    errors=remount-ro 0       1  
+/dev/mapper/**nginx--vg**-swap_1 none            swap    sw              0       0  
 ```
 cat /boot/grub/grub.cfg | grep nginx
 ```
