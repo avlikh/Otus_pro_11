@@ -49,20 +49,33 @@ vgrename nginx-vg otus
 vgchange -ay
 ```
   2 logical volume(s) in volume group "otus" now active
+  
 ```
 sed -i 's/nginx--vg/otus/g' /etc/fstab && cat /etc/fstab | grep otus
 ```
+
 /dev/mapper/otus-root /               ext4    errors=remount-ro 0       1  
 /dev/mapper/otus-swap_1 none            swap    sw              0       0  
+
+```
+sed -i 's/nginx--vg/otus/g' /boot/grub/grub.cfg && cat /boot/grub/grub.cfg | grep otus
+```
+
+        linux   /vmlinuz-6.1.0-18-amd64 root=/dev/mapper/otus-root ro  quiet
+                linux   /vmlinuz-6.1.0-18-amd64 root=/dev/mapper/otus-root ro  quiet
+                linux   /vmlinuz-6.1.0-18-amd64 root=/dev/mapper/otus-root ro single
+                
 ```
 update-initramfs -c -k all
 ```
+
 update-initramfs: Generating /boot/initrd.img-6.1.0-18-amd64  
 W: initramfs-tools configuration sets RESUME=/dev/mapper/nginx--vg-swap_1  
 W: but no matching swap device is available.  
 I: The initramfs will attempt to resume from /dev/dm-1  
 I: (/dev/mapper/otus-swap_1)  
-I: Set the RESUME variable to override this.  
+I: Set the RESUME variable to override this.
+
 ```
 init 6
 ```
